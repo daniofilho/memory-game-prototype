@@ -1,0 +1,60 @@
+@keyframes scaleBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  1000% {
+    transform: scale(1);
+  }
+}
+
+#cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+
+  padding: 1rem;
+
+  width: 100%;
+  height: 100%;
+}
+
+#cards-list .card.flipped {
+  transform: rotateY(180deg);
+
+  background-image: url("/assets/images/card-background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#cards-list .card.flipped button {
+  opacity: 0;
+}
+
+#cards-list .card {
+  transition: 0.5s;
+  border: 1px solid #666;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: var(--cardBackground);
+}
+
+#cards-list .card button {
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  border-width: 0;
+
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+#cards-list .card.correct {
+  animation: scaleBounce 0.3s 1 forwards;
+}
