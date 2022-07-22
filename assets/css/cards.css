@@ -25,7 +25,7 @@
 #cards-list .card.flipped {
   transform: rotateY(180deg);
 
-  background-image: url("/assets/images/card-background.jpg");
+  background-image: url("../images/card-background.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;

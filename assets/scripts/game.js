@@ -122,7 +122,7 @@ const handler = () => {
       if (index === Math.floor(shuffledCards.length / 2)) {
         html += `
             <div class="card logo">
-              <button type="button" style="background-image: url('/assets/images/card-logo.jpg')"> 
+              <button type="button" style="background-image: url('assets/images/card-logo.jpg')"> 
               </button>
             </div>
           `;
@@ -130,7 +130,7 @@ const handler = () => {
 
       html += `
           <div class="card" id="card-${index}" data-card-id="${card.id}" >
-            <button type="button" onclick="javascript:gameHandler.selectCard('${index}')" style="background-image: url('/assets/images/${card.id}.jpg')">
+            <button type="button" onclick="javascript:gameHandler.selectCard('${index}')" style="background-image: url('assets/images/${card.id}.jpg')">
             </button>
           </div>
         `;
